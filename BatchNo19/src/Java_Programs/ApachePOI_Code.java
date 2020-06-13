@@ -19,12 +19,12 @@ static int sum1 = 0;
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		FileInputStream fis = new FileInputStream("C:\\Users\\DELL\\Desktop\\ApachePOI_Excel.xlsx");
-		
+		// comment Number1
 	//	FileInputStream fis = new FileInputStream("‪C:\\Users\\DELL\\Desktop\\ApachePOI_Excel.xlsx");
 		XSSFWorkbook rwb = new XSSFWorkbook(fis);
 		XSSFSheet rsh = rwb.getSheet("Sheet1");
 		//XSSFSheet rsh = rwb.getSheetAT(0);
-		
+		//comment number 2
 		int nur = rsh.getPhysicalNumberOfRows();
 		int nuc = rsh.getRow(0).getPhysicalNumberOfCells();
 		
@@ -40,12 +40,9 @@ static int sum1 = 0;
 				// Data Formatter code
 				DataFormatter  formatter = new DataFormatter();
 				String x = formatter.formatCellValue(cell);
-				sum = sum + Integer.parseInt(x);
-				
+				sum = sum + Integer.parseInt(x);				
 			  }
-			System.out.println(sum);
-			
-			
+			System.out.println(sum);			
 			XSSFCell cell1 = rsh.getRow(i).createCell(nuc);
 			cell1.setCellValue(Integer.toString(sum));
 		} 
@@ -58,11 +55,9 @@ static int sum1 = 0;
 				// Data Formatter code
 				DataFormatter  formatter = new DataFormatter();
 				String x = formatter.formatCellValue(cell);
-				sum = sum + Integer.parseInt(x);
-				
+				sum = sum + Integer.parseInt(x);				
 			  }
-			System.out.println(sum);
-						
+			System.out.println(sum);						
 			XSSFCell cell1 = rsh.getRow(nuc).createCell(i);
 			cell1.setCellValue(Integer.toString(sum));
 		}
