@@ -1,0 +1,6 @@
+package Java_Programs;
+
+public abstract class A {
+	public abstract void add();
+
+}
